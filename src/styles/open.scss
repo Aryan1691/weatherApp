@@ -1,0 +1,182 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&family=Roboto:wght@500&display=swap');
+
+  *{
+    font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+
+  }
+body{
+    
+    color: black;
+    overflow: hidden;
+    animation-name: name;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in;
+    margin: 25px;
+    
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   position: relative;
+   
+
+   >div >input{
+    width: 100%;
+    height: 7vh;
+    border-radius: 100px;
+    border: 2px solid;
+    background-color: beige;
+    font-size: 1rem;
+    padding: 10px;
+    box-shadow: 2px 4px 2px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+   &:focus{
+    background-color: rgb(30, 29, 29);
+    color: white;
+   }
+    }
+}
+
+.wave{
+    width: 60%;
+    background-color: black;
+    height: 50vh;
+    position: absolute;
+    margin-top: 86%;
+    border-radius: 100%;
+    
+}
+.-one{
+    background-color: rgb(177, 177, 242);
+margin-left: -15pc;
+    margin-bottom: -1px;
+    z-index: 1;
+    transition: 2s;
+    transform: translateX(10px);
+    animation-name: update;
+    animation-timing-function:ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+.-two{
+    background-color: rgb(158, 158, 233);
+    margin-left: 90px;
+    margin-bottom: 3%;
+    transform: translateX(10px);
+    animation-name: update;
+    animation-timing-function:ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 0.7s;
+
+    animation-iteration-count: infinite;
+}
+.-three{
+    background-color: rgb(130, 130, 235);
+    margin-left: 45pc;
+    margin-bottom: 3px;
+
+    transform: translateX(10px);
+    animation-name: update;
+    animation-timing-function:ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 1s;
+
+    animation-iteration-count: infinite;
+}
+img{
+    width: 45px;
+    position: relative;
+    top: 12px;
+    transition: 2s;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(0deg)
+
+    } from{
+        transform: rotate(360deg);
+    }
+}
+.info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+@keyframes update {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 20px;
+        }
+    100%{
+        left: 0;
+        }
+}
+@keyframes name {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+i{
+    --fa-primary-color: "#00f556"; --fa-secondary-color: "#002461"; --fa-secondary-opacity: 1;
+}
+@media screen and (max-width:750px) {
+    .wave{
+        width: 100%;
+        background-color: black;
+        height: 50vh;
+        position: absolute;
+        margin-top: 86%;
+        border-radius: 100%;
+        
+    }
+    .-one{
+        background-color: rgb(177, 177, 242);
+        margin-left: -10pc;
+        
+            top: 15pc;
+            border-radius: 50%;
+    }
+    .-two{
+        background-color: rgb(158, 158, 233);
+        margin-left: 90px;
+
+        top: 15pc;
+        border-radius: 50%;
+    }
+    .-three{
+        background-color: rgb(130, 130, 235);
+        margin-left: 2pc;
+      
+        top: 15pc;
+        z-index: 1;
+        border-radius: 50%;
+
+    }
+    .box{
+        position: relative;
+        top: 44px;
+        left: -25px;
+    }
+}
